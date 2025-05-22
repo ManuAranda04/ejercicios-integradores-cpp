@@ -1,5 +1,10 @@
 #include <iostream>
-//Desarrolla un programa que permita convertir entre diferentes unidades de medida. Implementa funciones separadas para conversiones de: temperatura (Celsius, Fahrenheit, Kelvin), longitud (metros, pies, pulgadas), peso (kilogramos, libras) y volumen (litros, galones). El programa debe tener un menú principal para seleccionar el tipo de unidad y submenús para las conversiones específicas. Diseña las condiciones de los bucles para que el programa continúe ejecutándose hasta que el usuario elija salir.
+//Desarrolla un programa que permita convertir entre diferentes unidades de medida. 
+//Implementa funciones separadas para conversiones de: 
+//temperatura (Celsius, Fahrenheit, Kelvin), longitud (metros, pies, pulgadas), peso (kilogramos, libras) y volumen (litros, galones). 
+//El programa debe tener un menú principal para seleccionar el tipo de unidad y submenús 
+//para las conversiones específicas. Diseña las condiciones de los bucles para que el programa 
+//continúe ejecutándose hasta que el usuario elija salir.
 
 float tempCalculadora(){
     float resultado;
@@ -120,30 +125,30 @@ float pesoCalculadora(){
 
 float volumenCalculadora(){
     float resultado;
-    float masaInicial;
-    int unidadMasaInicial;
-    int unidadMasaFinal;
+    float volumenInicial;
+    int unidadVolumenInicial;
+    int unidadVolumenFinal;
     do
     {
         std::cout << "Escoja la unidad inicial" << std::endl << "1. Litros./2. Galones" << std::endl;
-        std::cin >> unidadMasaInicial;
+        std::cin >> unidadVolumenInicial;
         std::cout << "Escoja a que unidad quiere convertir su valor inicial" << std::endl << "1. Litros./2. Galones" << std::endl;
-        std::cin >> unidadMasaFinal;
-        if (unidadMasaInicial == unidadMasaFinal)
+        std::cin >> unidadVolumenFinal;
+        if (unidadVolumenInicial == unidadVolumenFinal)
         {
             std::cout << "Estas convirtiendo de una unidad a sí misma :)" << std::endl;
         }
-    } while ((unidadMasaInicial != 1 && unidadMasaInicial != 2) || (unidadMasaFinal != 1 && unidadMasaFinal != 2) || (unidadMasaInicial == unidadMasaFinal));
+    } while ((unidadVolumenInicial != 1 && unidadVolumenInicial != 2) || (unidadVolumenFinal != 1 && unidadVolumenFinal != 2) || (unidadVolumenInicial == unidadVolumenFinal));
 
     std::cout << "Ingrese la masa:" << std::endl;
-    std::cin >> masaInicial;
+    std::cin >> volumenInicial;
 
-    if (unidadMasaInicial == 1 && unidadMasaFinal == 2)
+    if (unidadVolumenInicial == 1 && unidadVolumenFinal == 2)
     {
-        resultado = masaInicial / 3.785;
+        resultado = volumenInicial / 3.785;
     }
-    if (unidadMasaInicial == 2 && unidadMasaFinal == 1){
-        resultado = masaInicial * 3.785;
+    if (unidadVolumenInicial == 2 && unidadVolumenFinal == 1){
+        resultado = volumenInicial * 3.785;
     }
 
     return resultado;
